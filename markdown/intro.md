@@ -1,11 +1,10 @@
-# Title
+# Learn Complex Skills, From Anywhere
 
-Subtitle or catchy tagline
+Combining Django, Ansible and OpenStack to teach any tech skill
 
 * * *
 
-Speaker Name | [@speaker](https://twitter.com/speaker)
+Florian Haas | [@xahteiwi](https://twitter.com/xahteiwi)
 
-Event | Date
+linux.conf.au 2019 | 2019-01-23
 
-Note: Add introductory slides here.
