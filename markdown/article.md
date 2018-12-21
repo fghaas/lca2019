@@ -20,7 +20,17 @@ distributed systems to use as realistic learning environments. We must
 enable them to learn from anywhere, at any time, and on their own
 pace. 
 
-TODO: Explain what we need in a learning platform to achieve this.
+Now subjecting, say, a Ceph novice to the joys of downloading dozens
+of Gigabytes’ worth of virtual images won’t make for a stellar
+learning experience: you’re likely not in possession of a laptop that
+comes close to the memory and CPU capacity of a modern server, much
+less of at least 10 of them to simulate a decent-sized Ceph cluster.
+
+What’s the alternative? The alternative is a system that gives
+learners access to arbitrarily complex, realistic distributed
+environments on demand. As it turns out, the combination of two Opens,
+Open edX and OpenStack, is an excellent option to provide exactly
+that.
 
 
 ## Open edX
@@ -78,9 +88,15 @@ A flexible, extensible plugin system
 
 <!-- Note -->
 
-TODO: Explain how XBlocks work, how they tie in with Open edX, and
-that everyone can write their own (or choose from the many that are
-available).
+XBlocks are Open edX’s plugin system that allows XBlock authors to
+significantly expand Open edX’s functionality. XBlocks exists for
+learning purposes as diverse as building molecular models in
+chemistry, or solving mathematical equations.
+
+For learning interactively on OpenStack-hosted resources, an XBlock
+comes in handy that spins up course author defined Heat stacks on
+demand, and presents either a terminal session or and RDP session
+right in the learner’s browser, via Apache Guacamole.
 
 
 ## OpenStack
