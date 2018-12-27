@@ -104,18 +104,26 @@ Arbitrarily complex lab environments for learners
 
 <!-- Note -->
 
-TODO: Explain what OpenStack Heat is, how we can use it to define
-arbitrarily complex, but completely reproducible learning
-environments, and that we can interface from Open edX both with
-private and public OpenStack clouds.
+OpenStack is an infrastructure-as-a-service platform whose
+orchestration component, OpenStack Heat, comes in handy in providing
+arbitrarily complex lab environments to learners. Using a Heat
+template, a course author can define an exactly reproducible,
+self-contained environment consisting of, say, 10 servers in 3
+networks connected with 2 routers and arbitrarily involved
+configurations for each server.
 
-
-## How to avoid breaking the bank
-
-<!-- Note -->
-
-TODO: Explain that OpenStack Heat allows Open edX operators, uniquely,
-to suspend and resume full lab environments at will, and that this
-enables them to offer learners very complex and realistic learning
-environments at a fraction of their regular cost, with non-existant
-learner-facing setup hassles.
+Heat has some interesting features that set it apart from its
+workalikes on other cloud platforms, like AWS CloudFormation or Google
+Cloud Platform Deployment Manager. In particular, Heat has the ability
+to suspend an entire stack, however complex, in-place – to then resume
+it at a much later date and return it to the exact same state as it
+previously was. This, of course, comes in quite handy in the training
+lab use case: in self-paced training, learners typically spend 30-45
+minutes on each lesson, and might do one such lesson either every day,
+or every other day. Over the course of a month, learners may thus use
+their lab for as little as perhaps 10 hours in total. Keeping that
+same lab running over the entire month, at a cost of perhaps in excess
+of $1,000, would be entirely cost-prohibitive. However, making the lab
+available with surgical precision only when needed can drive this
+price point down into just double digits, and making the whole
+endeavor entirely affordable.
