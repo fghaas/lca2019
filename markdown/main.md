@@ -54,3 +54,20 @@ environment quickly.
 <!-- .slide: data-background-image="images/cluster.svg" data-background-size="contain" -->
 
 <!-- Note -->
+What we need to deploy with Heat is two things: one, we need a backend
+cluster. This is always an exactly 3-node MySQL and MongoDB cluster
+that uses persistent volumes. This contains all the data that we need
+to preserve: courseware content, enrollment data, authentication
+credentials (if we’re not using an external authentication backend
+like OAuth or SAML), that sort of data.
+
+Two, we need an application server cluster. This is a scaleable
+frontend that consists of one or more front-end nodes. Small Open edX
+installations might deploy one one. Others, 2 to 3. Still larger ones,
+dozens. These can scale in and out as needed. To maintain one
+consistent frontend, we plug all of those into an OpenStack managed
+load balancer — either [Neutron LBaaSv2 (now
+deprecated)](https://wiki.openstack.org/wiki/Neutron/LBaaS), or
+[Octavia](https://docs.openstack.org/octavia/latest/). Heat manages
+all of that for us — scale-out (cluster expansion), scale-in (cluster
+contraction), and LBaaS pool management.
