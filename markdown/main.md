@@ -71,3 +71,16 @@ deprecated)](https://wiki.openstack.org/wiki/Neutron/LBaaS), or
 [Octavia](https://docs.openstack.org/octavia/latest/). Heat manages
 all of that for us — scale-out (cluster expansion), scale-in (cluster
 contraction), and LBaaS pool management.
+
+
+<!-- .slide: data-background-image="images/ansible-logo.svg" data-background-size="contain" -->
+
+<!-- Note -->
+Once scaffolding is in place for a fresh cluster with Heat, we deploy
+an Open edX environment using the edX project’s official
+`edx-configuration` Ansible playbooks. Now these playbooks again do
+two things:
+
+* For the backend nodes, we deploy them straight from Ansible.
+* For the frontend servers, we use Ansible to create a master image,
+  which we then snapshot, and deploy as often as we need.
