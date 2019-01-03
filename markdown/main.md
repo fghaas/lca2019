@@ -50,3 +50,7 @@ provider](https://www.terraform.io/docs/providers/openstack/), would
 be another), but it’s a good and effective way to spin up an Open edX
 environment quickly.
 
+
+<!-- .slide: data-background-image="images/cluster.svg" data-background-size="contain" -->
+
+<!-- Note -->
