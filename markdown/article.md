@@ -1,4 +1,6 @@
 <!-- Note -->
+TODO: Add lead-in
+
 Almost every new technology developed in recent years has been
 complex, distributed, and built for scale:
 [Kubernetes](https://kubernetes.io/), [Ceph](https://ceph.com), and
@@ -67,6 +69,8 @@ developers. Any learner and student interacts with the LMS to access
 course content, watch videos, take labs and quizzes, and collaborate
 with co-learners.
 
+TODO: Include LMS screen shot
+
 Its cousin, the content management system (you guessed it, `cms`,
 although there is a slightly snazzier alias available in _Open edX
 Studio_), is for teachers, instructors, and course authors. Learners
@@ -75,6 +79,8 @@ optional.  Those who prefer to, can manage course content in an
 external content store or a revision control system like
 [Git](https://git-scm.com/), and import from there. Like the LMS, the
 CMS is also a Django application.
+
+TODO: Include CMS screen shot
 
 For interactions with other machines rather than humans, Open edX
 heavily uses the [Django REST
@@ -101,6 +107,8 @@ demand, and presents either a terminal session or and
 [RDP](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol) session
 right in the learner’s browser, via [Apache
 Guacamole](https://guacamole.apache.org/).
+
+TODO: Include screen shot of course page including terminal window
 
 
 ## OpenStack
@@ -135,3 +143,8 @@ at a cost of perhaps in excess of $1,000, would be entirely
 cost-prohibitive. However, making the lab available with surgical
 precision only when needed can drive this price point down into just
 double digits, and making the whole endeavor entirely affordable.
+
+TODO: Include screen shot of “we think you’re busy elsewhere” message
+
+
+TODO: Add wrap-up
