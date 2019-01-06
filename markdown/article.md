@@ -5,16 +5,17 @@ Almost every new technology developed in recent years has been
 complex, distributed, and built for scale:
 [Kubernetes](https://kubernetes.io/), [Ceph](https://ceph.com), and
 [OpenStack](https://openstack.org/) can serve as just a few
-representative examples.
+representative examples. These systems are quite different from the
+ones we saw just a few years ago. Practically any nontrivial software
+solution today comes with loose coupling, asynchronicity, and
+elasticity – properties usually absent from the systems of the
+past. 
 
-These systems are quite different from the ones we saw just a few years
-ago. Practically any nontrivial software solution today comes with
-loose coupling, asynchronicity, and elasticity – properties usually
-absent from the systems of the past. People comfortable with building
-and operating such complex systems are rare and in high demand.  This
-presents a problem for organizations who are struggling to adopt new
-technologies precisely because they lack people who understand them:
-we are dealing with a skills gap, not a technology gap.
+People comfortable with building and operating such complex systems
+are rare and in high demand.  This presents a problem for
+organizations who are struggling to adopt new technologies precisely
+because they lack people who understand them: we are dealing with a
+skills gap, not a technology gap.
 
 This means that we need novel ways to allow professionals to
 familiarize themselves with these technologies. We must provide
