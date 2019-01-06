@@ -103,9 +103,18 @@ significantly expand Open edX’s functionality. XBlocks exist for
 learning purposes as diverse as building molecular models in
 chemistry, or solving mathematical equations.
 
-For learning interactively on OpenStack-hosted resources, an XBlock
-comes in handy that spins up course author defined Heat stacks on
-demand, and presents either a terminal session or and
+The XBlock SDK and API are [Apache
+licensed](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)),
+so that XBlock authors can, in principle, write XBlocks that interface
+with systems that do not use open source licenses themselves. In
+practice, [most available
+XBlocks](https://openedx.atlassian.net/wiki/spaces/COMM/pages/43385346/XBlocks+Directory)
+do use OSI-approved licenses.
+
+For learning interactively on OpenStack-hosted resources, [an
+XBlock](https://github.com/hastexo/hastexo-xblock) comes in handy that
+spins up course author defined Heat stacks on demand, and presents
+either a terminal session or and
 [RDP](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol) session
 right in the learner’s browser, via [Apache
 Guacamole](https://guacamole.apache.org/).
