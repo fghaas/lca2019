@@ -1,5 +1,6 @@
-<!-- Note -->
-TODO: Add lead-in
+The combination of Open edX and OpenStack can enable information
+technology professionals to acquire critical skills in complex
+distributed systems technology.
 
 Almost every new technology developed in recent years has been
 complex, distributed, and built for scale:
