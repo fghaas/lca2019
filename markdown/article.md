@@ -2,6 +2,8 @@ The combination of Open edX and OpenStack can enable information
 technology professionals to acquire critical skills in complex
 distributed systems technology.
 
+## New technology, new challenges
+
 Almost every new technology developed in recent years has been
 complex, distributed, and built for scale:
 [Kubernetes](https://kubernetes.io/), [Ceph](https://ceph.com), and
