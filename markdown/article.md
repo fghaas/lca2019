@@ -158,4 +158,21 @@ double digits, and making the whole endeavor entirely affordable.
 TODO: Include screen shot of “we think you’re busy elsewhere” message
 
 
-TODO: Add wrap-up
+## In summary
+
+By combining the facilities of Open edX — in particular its XBlock
+plugin system — with OpenStack, a learning provider can give learners
+the opportunity to explore the inner workings of arbitrarily complex
+distributed systems in a completely self-directed and very
+cost-effective fashion. Such a system — comprised of exclusively
+open-source components — can enable organizations and individuals to
+quickly grow technology skills.
+
+* * *
+
+*The author of this article is to present [a technical
+overview](https://linux.conf.au/schedule/presentation/121/) of the
+Open edX platform as part of the
+[linux.conf.au](https://linux.conf.au/) conference in Christchurch,
+New Zealand later this month. This article will be updated with slides
+and a video of the presentation, once they become available.*
