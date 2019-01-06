@@ -114,7 +114,7 @@ XBlocks](https://openedx.atlassian.net/wiki/spaces/COMM/pages/43385346/XBlocks+D
 do use OSI-approved licenses.
 
 For learning interactively on OpenStack-hosted resources, [an
-XBlock](https://github.com/hastexo/hastexo-xblock) comes in handy that
+XBlock](https://github.com/hastexo/hastexo-xblock) is available that
 spins up course author defined Heat stacks on demand, and presents
 either a terminal session or and
 [RDP](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol) session
