@@ -58,6 +58,12 @@ development, and continues to host the [edx.org](https://www.edx.org)
 learning site, but the entire platform is open source software and
 welcomes community contributions.
 
+[As of May 2018](https://blog.edx.org/furthering-the-edx-mission),
+edx.org had served approximately 16 million learners through its own
+and its official partners’ sites. At the same time, another 18 million
+learners were estimated to use independent Open edX based platforms
+world-wide.
+
 
 ### Django all the way
 (almost)
