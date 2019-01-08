@@ -163,7 +163,8 @@ cost-prohibitive. However, making the lab available with surgical
 precision only when needed can drive this price point down into just
 double digits, and making the whole endeavor entirely affordable.
 
-TODO: Include screen shot of “we think you’re busy elsewhere” message
+![“We think you’re busy elsewhere” message seen in a lab environment
+that has been automatically suspended because of learner inactivity](../images/suspended-lab.png)
 
 
 ## In summary
