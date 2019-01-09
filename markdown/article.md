@@ -154,7 +154,12 @@ Cloud Deployment
 Manager](https://cloud.google.com/deployment-manager/). In particular,
 Heat has the ability to suspend an entire stack, however complex,
 in-place – to then resume it at a much later date and return it to the
-exact same state as it previously was. This, of course, comes in quite
+exact same state as it previously was.
+
+![“We think you’re busy elsewhere” message seen in a lab environment
+that has been automatically suspended because of learner inactivity](../images/suspended-lab.png)
+
+This, of course, comes in quite
 handy in the training lab use case: in self-paced training, learners
 typically spend 30-45 minutes on each lesson, and might do one such
 lesson either every day, or every other day. Over the course of a
@@ -164,9 +169,6 @@ at a cost of perhaps in excess of $1,000, would be entirely
 cost-prohibitive. However, making the lab available with surgical
 precision only when needed can drive this price point down into just
 double digits, and making the whole endeavor entirely affordable.
-
-![“We think you’re busy elsewhere” message seen in a lab environment
-that has been automatically suspended because of learner inactivity](../images/suspended-lab.png)
 
 
 ## In summary
