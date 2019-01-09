@@ -91,7 +91,7 @@ external content store or a revision control system like
 [Git](https://git-scm.com/), and import from there. Like the LMS, the
 CMS is also a Django application.
 
-TODO: Include CMS screen shot
+![Open edX Studio, Open edX’s built-in content management system (CMS)](../images/studio.png)
 
 For interactions with other machines rather than humans, Open edX
 heavily uses the [Django REST
