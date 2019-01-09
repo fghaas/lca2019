@@ -128,7 +128,8 @@ either a terminal session or and
 right in the learner’s browser, via [Apache
 Guacamole](https://guacamole.apache.org/).
 
-TODO: Include screen shot of course page including terminal window
+![An example interactive lab in which a learner bootstraps an
+OpenStack cluster with OpenStack-Ansible](../images/running-lab.png)
 
 
 ## OpenStack
