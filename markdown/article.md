@@ -189,3 +189,11 @@ Open edX platform as part of the
 [linux.conf.au](https://linux.conf.au/) conference in Christchurch,
 New Zealand later this month. This article will be updated with slides
 and a video of the presentation, once they become available.*
+
+*Screenshots in this article are taken from the **OpenStack Deployment
+and Operations** course on the City Cloud Academy platform (which runs
+on Open edX), co-written by the author. 25 seats in this course are
+available every month, free-of-charge to the open source software
+community community, on a first-come, first-served basis. If you are
+interested in this and other courses, take a look at
+<https://academy.citycloud.com>.*
