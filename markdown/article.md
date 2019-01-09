@@ -79,7 +79,8 @@ developers. Any learner and student interacts with the LMS to access
 course content, watch videos, take labs and quizzes, and collaborate
 with co-learners.
 
-TODO: Include LMS screen shot
+![A course overview page from Open edX’s Learning Management System
+(LMS)](../images/course-overview.png)
 
 Its cousin, the content management system (you guessed it, `cms`,
 although there is a slightly snazzier alias available in _Open edX
