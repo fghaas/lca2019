@@ -25,20 +25,20 @@ And I’m going to start with Open edX. This is a learning management platform t
 originally started at
 
 
-<!-- .slide: data-background-image="https://upload.wikimedia.org/wikipedia/en/2/29/Harvard_shield_wreath.svg" data-background-size="contain" -->
+<!-- .slide: data-background-image="images/Harvard_shield_wreath.svg" data-background-size="contain" -->
 
 <!-- Note -->
 [Harvard University](https://www.harvard.edu/) and
 
 
-<!-- .slide: data-background-image="https://upload.wikimedia.org/wikipedia/en/4/44/MIT_Seal.svg" data-background-size="contain" -->
+<!-- .slide: data-background-image="images/MIT_Seal.svg" data-background-size="contain" -->
 
 <!-- Note -->
 [MIT](https://www.mit.edu/) in 2012, with subsequent collaboration
 from
 
 
-<!-- .slide: data-background-image="https://upload.wikimedia.org/wikipedia/en/b/b7/Stanford_University_seal_2003.svg" data-background-size="contain" -->
+<!-- .slide: data-background-image="images/Stanford_University_seal_2003.svg" data-background-size="contain" -->
 
 <!-- Note -->
 [Stanford University](https://www.stanford.edu/). This platform was
@@ -46,7 +46,7 @@ originally an in-house development of these three universities, but
 was then released as open source software in 2013 under the
 
 
-## AGPL
+# AGPL
 
 <!-- Note -->
 [AGPL](https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0)),
@@ -60,11 +60,14 @@ adopter in 2015.
 
 <!-- Note -->
 Now in order to clarify, **edX** (without the “Open”) is — depending
-on context — either *edx.org*, a learning website serving
-approximately 16 million learners world-wide, with content developed
-in the aforementioned universities and over 60 member organizations,
-or *edX Inc.*, the non-profit entity that *runs* edx.org and drives
-most of the development of the platform.
+on context — either 
+
+* *edx.org*, a learning website serving approximately 16 million
+  learners world-wide, with content developed in the aforementioned
+  universities and over 60 member organizations, or
+
+* *edX Inc.*, the non-profit entity that *runs* edx.org and drives
+  most of the development of the platform.
 
 
 <!-- .slide: data-background-image="images/openedx-logo.svg" data-background-size="contain" -->
@@ -72,11 +75,11 @@ most of the development of the platform.
 <!-- Note -->
 **Open edX** is that technology platform itself — which I’m going into
 great detail about in a bit — which runs both edx.org and many, many
-other non edX Inc. affiliated learning platforms. Anyone can deploy,
-run, and operate an Open edX site provided they comply with the terms
-of the AGPL. In 2018, the estimate was that 18 million learners
-learned on unaffiliated Open edX platforms, *on top of* the 16 million
-learning on edx.org.
+learning platforms that are not affiliated with edX Inc. Anyone can
+deploy, run, and operate an Open edX site provided they comply with
+the terms of the AGPL. In 2018, the estimate was that 18 million
+learners were learning on unaffiliated Open edX platforms, *on top of*
+the 16 million learning on edx.org.
 
 So let’s take a look at the technical details of this platform.
 
