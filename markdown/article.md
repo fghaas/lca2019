@@ -82,7 +82,7 @@ with co-learners.
 ![A course overview page from Open edX’s Learning Management System
 (LMS)](../images/course-overview.png)
 
-Its cousin, the content management system (you guessed it, `cms`,
+Its cousin, the course management system (you guessed it, `cms`,
 although there is a slightly snazzier alias available in _Open edX
 Studio_), is for teachers, instructors, and course authors. Learners
 do not interact with Studio, and even for authors, its use is
@@ -91,7 +91,7 @@ external content store or a revision control system like
 [Git](https://git-scm.com/), and import from there. Like the LMS, the
 CMS is also a Django application.
 
-![Open edX Studio, Open edX’s built-in content management system (CMS)](../images/studio.png)
+![Open edX Studio, Open edX’s built-in course management system (CMS)](../images/studio.png)
 
 For interactions with other machines rather than humans, Open edX
 heavily uses the [Django REST
