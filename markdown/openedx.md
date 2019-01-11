@@ -1,4 +1,5 @@
 # LMS
+Learning Management System
 
 <!-- Note -->
 
@@ -33,16 +34,49 @@ familiar to people comfortable with Django applications: it runs in
 its own venv, it relies on pip packages to provide additional
 functionality, it puts its data into a MySQL database (relational data
 includes things like user details, course enrollments, or exercise
-results).
+results), it makes use of the django-storage abstraction layer.
 
 
 # CMS
+Course Management System
 
-Its cousin, the course management system (you guessed it, `cms`,
-although there is a slightly snazzier alias available in _Open edX
-Studio_), is for teachers, instructors, and course authors. Learners
-do not interact with Studio, and even for authors, its use is
+<!-- Note -->
+
+And then there’s its cousin, the course management system (you guessed
+it, `cms`, although there is a slightly snazzier alias available in
+_Open edX Studio_), which is for teachers, instructors, and course
+authors.
+
+_Cut to CMS demo:_
+
+* Open course overview
+* Course setting
+* (optional) some course content
+
+Learners do not interact with Studio, and even for authors, its use is
 optional.  Those who prefer to, can manage course content in an
 external content store or a revision control system like
 [Git](https://git-scm.com/), and import from there. Like the LMS, the
 CMS is also a Django application.
+
+
+## OLX
+Open Learning XML
+
+<!-- Note -->
+
+Courseware content is internally stored in an XML flavor called OLX,
+and lives in a content store called
+
+
+## GridFS
+
+<!-- Note -->
+
+... which is admittedly a _little bit_ quirky in that it’s something
+that more-or-less emulates a filesystem, but in MongoDB. Bluntly
+speaking this a really odd way to store file-like content — it’s
+basically a kluge, for Open edX’s use case — , but its introduction
+predated the ready availability of stable distributed filesystems like
+CephFS (and evidently, NFS wasn’t an option), and it seems to be
+really hard to get rid of.
