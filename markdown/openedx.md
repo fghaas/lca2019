@@ -80,3 +80,38 @@ basically a kluge, for Open edX’s use case — , but its introduction
 predated the ready availability of stable distributed filesystems like
 CephFS (and evidently, NFS wasn’t an option), and it seems to be
 really hard to get rid of.
+
+
+<!-- .slide: data-background-image="images/cluster.svg" data-background-size="contain" -->
+
+<!-- Note -->
+
+So that _application_ architecture then brings us so a _systems_
+architecture that looks roughly like this:
+
+* A persistent backend holding MongoDB and MySQL data (of which we
+  need a 3-node cluster to ensure high availability)
+* An arbitrarily large or small set of essentially stateless frontend
+  application servers.
+
+Since all communication with the frontend servers is either
+straight-up web content or REST, and thus uses HTTP/HTTPS everywhere,
+we can easily stick all the frontend servers behind a load balancer
+and be done with it.
+
+
+<!-- .slide: data-background-image="images/ansible-logo.svg" data-background-size="contain" -->
+
+<!-- Note -->
+
+And what do we use to deploy all this? Ansible, of course. Open edX
+includes, as part of its AGPL-licensed stack, the `edx-configuration`
+GitHub repo, which contains a bunch of Ansible roles and playbooks to
+fully automate the deployment of an edX environment.
+
+In principle, Open edX is platform agnostic. You can run it directly
+on baremetal servers running Ubuntu, you can run it in VMware or KVM,
+on AWS (this is what edx.org uses), or in Docker containers (the
+recently-renamed [Tutor](http://docs.tutor.overhang.io/en/latest/)
+project, formerly called `openedx-docker`). However, for the rest of
+this talk, I’ll be focusing on running Open edX on OpenStack.
