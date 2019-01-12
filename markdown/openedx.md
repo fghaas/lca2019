@@ -60,6 +60,31 @@ external content store or a revision control system like
 CMS is also a Django application.
 
 
+# DRF
+Django REST Framework
+
+<!-- Note -->
+As a brief aside, what I’ve been talking about up to this point are
+Open edX components that are built for human consumption, but Open edX
+also has some elements that are for machine-to-machine communications.
+
+For example, Open edX has an analytics framework that allows you to
+analyze your learners’ age, gender, primary language, location with
+their learning success. That analytics framework talks to Open edX
+using a
+[REST](https://en.wikipedia.org/wiki/Representational_state_transfer)
+API.
+
+Likewise, there’s a system that enables you to sell course seats. That
+too uses a REST API.
+
+And those components are built on the [Django REST
+Framework](https://www.django-rest-framework.org/) with OAuth2
+authentication, which is also the standard Django way of doing things.
+
+(End aside)
+
+
 ## OLX
 Open Learning XML
 
@@ -105,9 +130,10 @@ and be done with it.
 <!-- Note -->
 
 And what do we use to deploy all this? Ansible, of course. Open edX
-includes, as part of its AGPL-licensed stack, the `edx-configuration`
-GitHub repo, which contains a bunch of Ansible roles and playbooks to
-fully automate the deployment of an edX environment.
+includes, as part of its AGPL-licensed stack, [the `edx/configuration`
+GitHub repo](https://github.com/edx/configuration/), which contains a
+bunch of Ansible roles and playbooks to fully automate the deployment
+of an edX environment.
 
 In principle, Open edX is platform agnostic. You can run it directly
 on baremetal servers running Ubuntu, you can run it in VMware or KVM,
