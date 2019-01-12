@@ -1,4 +1,4 @@
-<!-- .slide: data-background-image="images/by-sa.svg" data-background-size="contain" -->
+<!-- .slide: data-background-image="images/by.svg" data-background-size="contain" -->
 
 <!-- Note -->
 Add conclusion notes here.
