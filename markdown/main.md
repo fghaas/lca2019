@@ -82,5 +82,3 @@ learners were learning on unaffiliated Open edX platforms, *on top of*
 the 16 million learning on edx.org.
 
 So let’s take a look at the technical details of this platform.
-
-
