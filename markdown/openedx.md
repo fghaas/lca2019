@@ -105,9 +105,10 @@ and be done with it.
 <!-- Note -->
 
 And what do we use to deploy all this? Ansible, of course. Open edX
-includes, as part of its AGPL-licensed stack, the `edx-configuration`
-GitHub repo, which contains a bunch of Ansible roles and playbooks to
-fully automate the deployment of an edX environment.
+includes, as part of its AGPL-licensed stack, [the `edx/configuration`
+GitHub repo](https://github.com/edx/configuration/), which contains a
+bunch of Ansible roles and playbooks to fully automate the deployment
+of an edX environment.
 
 In principle, Open edX is platform agnostic. You can run it directly
 on baremetal servers running Ubuntu, you can run it in VMware or KVM,
