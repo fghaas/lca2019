@@ -2,8 +2,16 @@
 
 <!-- Note -->
 
-So with that, let’s get started! The learning platform that I’m
-talking about is primarily comprised of two things:
+So with that, let’s get started! I’m talking about a sophisticated
+learning platform today, one that is being used by over 30 million
+learners world-wide — strongly trending upward —, that is completely
+open-source and that *you* can work with.
+
+Indeed, you can run, deploy, and operate it yourself, and today I’m
+going to show you how.
+
+The platform that I’m talking about is primarily comprised of
+two things:
 
 
 <!-- .slide: data-background-image="images/openedx-logo.svg" data-background-size="contain" -->
