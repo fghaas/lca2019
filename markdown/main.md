@@ -2,8 +2,8 @@
 
 <!-- Note -->
 
-Now the learning platform that I’m talking about is primarily
-comprised of two things:
+So with that, let’s get started! The learning platform that I’m
+talking about is primarily comprised of two things:
 
 
 <!-- .slide: data-background-image="images/openedx-logo.svg" data-background-size="contain" -->
