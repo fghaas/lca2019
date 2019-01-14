@@ -1,7 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Cabin:400,700);
-@import url(//fonts.googleapis.com/css?family=Special+Elite:400,700);
-@import url(//fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
-@import url(//cdn.jsdelivr.net/npm/hack-font/build/web/hack.css);
+@import url(fonts.css);
 
 .reveal {
     font-family: "Open Sans Condensed", sans-serif;
@@ -39,18 +36,6 @@
         height: 90%;
         width: 100%;
         margin: 2%;
-    }
-
-    h1 {
-        font-size: 5em;
-    }
-
-    h2 {
-        font-size: 3em;
-    }
-
-    h3 {
-        font-size: 1.5em;
     }
 
     h1, h2 {
@@ -189,7 +174,8 @@
 @media print {
     .reveal {
         h1, h2, h3, h4, h5, h6 {
-            color: black;
+            color: black !important;
+            text-shadow: none;
         }
     }
 }
