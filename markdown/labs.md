@@ -127,3 +127,25 @@ cost-prohibitive. However, making the lab available with surgical
 precision only when needed can drive this price point down into just
 double digits, and making the whole endeavor entirely affordable.
 
+Now how does **that** work?
+
+
+## Celery
+
+<!-- Note -->
+Let me introduce you to [Celery](http://www.celeryproject.org/).
+
+Celery is an asynchronous task-queue and processing
+framework. Basically it’s a facility that allows an application to
+say, “go do X”, and then continue doing whatever it was doing while X
+is asychronously being completed in the background.
+
+[This is frequently used in Django
+applications](http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html),
+which can use Celery to offload asynchronous tasks and thus not hold
+up the (synchronous) request processing queue. In the XBlock, we use
+this for asynchronously firing off any API calls to OpenStack,
+including stack creation and deletion.
+
+But we also use it in a clever (I think) way to get automatic suspend
+and resume.
