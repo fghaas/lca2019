@@ -29,6 +29,27 @@ The `lms` is essentially a fairly involved
 whole _collection_ of applications, reflecting a theme that will no
 doubt be familiar to many Django developers.
 
+
+<!-- .slide: data-background-image="images/Gunicorn_logo_2010.svg" data-background-size="contain" -->
+
+<!-- Note -->
+
+As is quite common, Open edX runs Django in Gunicorn...
+
+
+<!-- .slide: data-background-image="images/Nginx_logo.svg" data-background-size="contain" -->
+
+<!-- Note -->
+
+... and then stuffs everything behind nginx, ...
+
+
+<!-- .slide: data-background-image="images/Django_logo.svg" data-background-size="contain" -->
+
+<!-- Note -->
+
+But really, for all practical purposes it’s really just Django.
+
 And there are many other things about the LMS that will feel very
 familiar to people comfortable with Django applications: it runs in
 its own venv, it relies on pip packages to provide additional
