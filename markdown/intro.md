@@ -1,5 +1,4 @@
-### Learn Complex Skills,
-### From Anywhere
+# Learn Complex Skills, From Anywhere
 
 Combining Django, Ansible and OpenStack to teach any tech skill
 
