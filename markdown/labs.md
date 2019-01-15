@@ -93,6 +93,30 @@ Guacamole](https://guacamole.apache.org/).
 _(Cut to lab demo)_
 
 
+<!-- .slide: data-background-image="images/celery-logo.svg" data-background-size="contain" -->
+
+<!-- Note -->
+Now in case you’re wondering how exactly we’re running rather complex
+and long-running tasks from within the processing of an HTTP request, 
+let me introduce you to [Celery](http://www.celeryproject.org/).
+
+Celery is an asynchronous task-queue and processing
+framework. Basically it’s a facility that allows an application to
+say, “go do X”, and then continue doing whatever it was doing while X
+is asychronously being completed in the background.
+
+[This is frequently used in Django
+applications](http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html),
+which can use Celery to offload asynchronous tasks and thus not hold
+up the (synchronous) request processing queue. In the XBlock, we use
+this for asynchronously firing off any API calls to OpenStack,
+including stack creation and deletion.
+
+We essentially wrap `python-heatclient` (the Python client library for
+OpenStack Heat) in a Celery task, and then report back the task’s
+outcome.
+
+
 <!-- .slide: data-background-image="images/openstack-logo.svg" data-background-size="contain" -->
 
 <!-- Note -->
@@ -130,22 +154,58 @@ double digits, and making the whole endeavor entirely affordable.
 Now how does **that** work?
 
 
-## Celery
+### Celery, Heat, & JavaScript
 
 <!-- Note -->
-Let me introduce you to [Celery](http://www.celeryproject.org/).
+Here’s what we do: when we spin up a stack, we record its creation
+timestamp in a database.
 
-Celery is an asynchronous task-queue and processing
-framework. Basically it’s a facility that allows an application to
-say, “go do X”, and then continue doing whatever it was doing while X
-is asychronously being completed in the background.
+And then we have an HTTP endpoint on the LMS that listens to keepalive
+`POST`s from the client. And there’s some JavaScript running in the
+user’s browser that sends a `POST` request every thirty
+seconds. Whenever we receive such a keepalive message, we update the
+stack timestamp (we actually don’t update in-place, we append to a
+stack log, but that’s a technicality).
 
-[This is frequently used in Django
-applications](http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html),
-which can use Celery to offload asynchronous tasks and thus not hold
-up the (synchronous) request processing queue. In the XBlock, we use
-this for asynchronously firing off any API calls to OpenStack,
-including stack creation and deletion.
+If the learner now closes their browser tab, or suspends their laptop,
+or loses their network connectivity so they can no longer interact
+with their lab, the stack timestamps don’t get updated.
 
-But we also use it in a clever (I think) way to get automatic suspend
-and resume.
+Server-side, we then have a “suspender” job that runs every minute
+(configurable) and scans the database for any stacks whose most recent
+keepalive timestamp is more than two minutes (configurable) old, and
+fires off a Heat stack suspend task (again, via Celery).
+
+When the user then returns to their lab, we resume the stack, instead
+of firing up a new one.
+
+
+### But wait...
+
+<!-- Note -->
+You may ask, hang on, if Guacamole has an SSH session open to the
+stack, and the stack suspends, and then resumes, surely the SSH
+session will hit some timeout and drop, in the interim. So how do you
+ensure a smooth learning experience?
+
+With a clever little `screen` hack.
+
+
+```bash
+# ~/.profile
+
+exec /usr/bin/screen -xRR
+```
+
+<!-- Note -->
+`screen -xRR` means “re-attached to the most recently attached
+`screen` session, and if there isn’t any running, then just fire up a
+new one.
+
+And by `exec`-ing that from the learner’s profile, we’re just forcing
+any SSH client (including `guacd`) to reconnect to the previous
+session.
+
+(For RDP-based sessions, we don’t need any such magic, as RDP is a
+protocol that always reconnects to an existing desktop that is
+preserved in the same state as it was left.)
