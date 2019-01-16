@@ -19,3 +19,6 @@ Add conclusion notes here.
   [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Django_logo.svg),
   Public Domain
 * Ansible logo:
+* Guacamole architecture: [Guacamole
+  Manual](https://guacamole.apache.org/doc/gug/guacamole-architecture.html),
+  ASL 2.0

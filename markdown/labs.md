@@ -90,6 +90,25 @@ either a terminal session or an
 right in the learner’s browser, via [Apache
 Guacamole](https://guacamole.apache.org/).
 
+
+<!-- .slide: data-background-image="images/guac-arch.png" data-background-size="contain" -->
+
+<!-- Note -->
+
+Guacamole is, essentially, a many-protocols-to-websockets gateway. A
+server-side daemon, `guacd`, is written in C and is highly efficient
+in translating RDP, VNC, SSH and perhaps others in the future
+([SPICE](https://issues.apache.org/jira/browse/GUACAMOLE-261) is one
+protocol that is under consideration, [direct X
+support](https://issues.apache.org/jira/browse/GUACAMOLE-168) is
+another). 
+
+The protocol that `guacd` emits is then read by a Java servlet,
+`guacamole`, and translated into the
+[WebSocket](https://en.wikipedia.org/wiki/WebSocket) protocol, which
+can then be consumed by the Guacamole *client*, running in the
+browser, which is a JavaScript application.
+
 _(Cut to lab demo)_
 
 
