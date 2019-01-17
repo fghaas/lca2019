@@ -1,4 +1,4 @@
-# Limitations
+## Limitations
 
 <!-- Note -->
 So, what are the things we **can't** do yet, or at least don't do very well?
@@ -6,7 +6,7 @@ So, what are the things we **can't** do yet, or at least don't do very well?
 Couple of things to mention here.
 
 
-## No “Save game” support
+### No “Save game” support
 
 <!-- Note -->
 First we‘d love the opportunity to have savepoints. This would mean
@@ -19,7 +19,7 @@ snapshot and rollback there), but unfortunately it isn‘t fully baked
 yet — it does not play nicely with nested stack resources, for example.
 
 
-## Nested virtualization
+### Nested virtualization
 
 <!-- Note -->
 Under some circumstances you may want to run VMs *within* a VM in a
