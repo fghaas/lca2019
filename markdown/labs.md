@@ -84,32 +84,8 @@ do use OSI-approved open source licenses.
 
 For learning interactively on OpenStack-hosted resources, [an
 XBlock](https://github.com/hastexo/hastexo-xblock) is available that
-spins up a course author defined Heat stack on demand, and presents
-either a terminal session or an
-[RDP](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol) session
-right in the learner’s browser, via [Apache
-Guacamole](https://guacamole.apache.org/).
-
-
-<!-- .slide: data-background-image="images/guac-arch.png" data-background-size="contain" -->
-
-<!-- Note -->
-
-Guacamole is, essentially, a many-protocols-to-websockets gateway. A
-server-side daemon, `guacd`, is written in C and is highly efficient
-in translating RDP, VNC, SSH and perhaps others in the future
-([SPICE](https://issues.apache.org/jira/browse/GUACAMOLE-261) is one
-protocol that is under consideration, [direct X
-support](https://issues.apache.org/jira/browse/GUACAMOLE-168) is
-another). 
-
-The protocol that `guacd` emits is then read by a Java servlet,
-`guacamole`, and translated into the
-[WebSocket](https://en.wikipedia.org/wiki/WebSocket) protocol, which
-can then be consumed by the Guacamole *client*, running in the
-browser, which is a JavaScript application.
-
-_(Cut to lab demo)_
+spins up a course author defined Heat stack on demand, and makes it
+available to learners exactly when needed.
 
 
 <!-- .slide: data-background-image="images/celery-logo.svg" data-background-size="contain" -->
@@ -199,7 +175,34 @@ When the user then returns to their lab, we resume the stack, instead
 of firing up a new one.
 
 
-### But wait...
+<!-- .slide: data-background-image="images/guac-arch.png" data-background-size="contain" -->
+
+<!-- Note -->
+
+Now how do we get something that the learner can actually interact
+with? We can present either a terminal session or an
+[RDP](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol) session
+right in the learner’s browser, via [Apache
+Guacamole](https://guacamole.apache.org/).
+
+Guacamole is, essentially, a many-protocols-to-websockets gateway. A
+server-side daemon, `guacd`, is written in C and is highly efficient
+in translating RDP, VNC, SSH and perhaps others in the future
+([SPICE](https://issues.apache.org/jira/browse/GUACAMOLE-261) is one
+protocol that is under consideration, [direct X
+support](https://issues.apache.org/jira/browse/GUACAMOLE-168) is
+another). 
+
+The protocol that `guacd` emits is then read by a Java servlet,
+`guacamole`, and translated into the
+[WebSocket](https://en.wikipedia.org/wiki/WebSocket) protocol, which
+can then be consumed by the Guacamole *client*, running in the
+browser, which is a JavaScript application.
+
+_(Cut to lab demo)_
+
+
+<!-- .slide: data-background-image="images/guac-arch.png" data-background-size="contain" -->
 
 <!-- Note -->
 You may ask, hang on, if Guacamole has an SSH session open to the
