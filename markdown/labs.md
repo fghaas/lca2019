@@ -84,32 +84,8 @@ do use OSI-approved open source licenses.
 
 For learning interactively on OpenStack-hosted resources, [an
 XBlock](https://github.com/hastexo/hastexo-xblock) is available that
-spins up a course author defined Heat stack on demand, and presents
-either a terminal session or an
-[RDP](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol) session
-right in the learner’s browser, via [Apache
-Guacamole](https://guacamole.apache.org/).
-
-
-<!-- .slide: data-background-image="images/guac-arch.png" data-background-size="contain" -->
-
-<!-- Note -->
-
-Guacamole is, essentially, a many-protocols-to-websockets gateway. A
-server-side daemon, `guacd`, is written in C and is highly efficient
-in translating RDP, VNC, SSH and perhaps others in the future
-([SPICE](https://issues.apache.org/jira/browse/GUACAMOLE-261) is one
-protocol that is under consideration, [direct X
-support](https://issues.apache.org/jira/browse/GUACAMOLE-168) is
-another). 
-
-The protocol that `guacd` emits is then read by a Java servlet,
-`guacamole`, and translated into the
-[WebSocket](https://en.wikipedia.org/wiki/WebSocket) protocol, which
-can then be consumed by the Guacamole *client*, running in the
-browser, which is a JavaScript application.
-
-_(Cut to lab demo)_
+spins up a course author defined Heat stack on demand, and makes it
+available to learners exactly when needed.
 
 
 <!-- .slide: data-background-image="images/celery-logo.svg" data-background-size="contain" -->
@@ -199,7 +175,34 @@ When the user then returns to their lab, we resume the stack, instead
 of firing up a new one.
 
 
-### But wait...
+<!-- .slide: data-background-image="images/guac-arch.png" data-background-size="contain" -->
+
+<!-- Note -->
+
+Now how do we get something that the learner can actually interact
+with? We can present either a terminal session or an
+[RDP](https://en.wikipedia.org/wiki/Remote_Desktop_Protocol) session
+right in the learner’s browser, via [Apache
+Guacamole](https://guacamole.apache.org/).
+
+Guacamole is, essentially, a many-protocols-to-websockets gateway. A
+server-side daemon, `guacd`, is written in C and is highly efficient
+in translating RDP, VNC, SSH and perhaps others in the future
+([SPICE](https://issues.apache.org/jira/browse/GUACAMOLE-261) is one
+protocol that is under consideration, [direct X
+support](https://issues.apache.org/jira/browse/GUACAMOLE-168) is
+another). 
+
+The protocol that `guacd` emits is then read by a Java servlet,
+`guacamole`, and translated into the
+[WebSocket](https://en.wikipedia.org/wiki/WebSocket) protocol, which
+can then be consumed by the Guacamole *client*, running in the
+browser, which is a JavaScript application.
+
+_(Cut to lab demo)_
+
+
+<!-- .slide: data-background-image="images/guac-arch.png" data-background-size="contain" -->
 
 <!-- Note -->
 You may ask, hang on, if Guacamole has an SSH session open to the
@@ -228,3 +231,37 @@ session.
 (For RDP-based sessions, we don’t need any such magic, as RDP is a
 protocol that always reconnects to an existing desktop that is
 preserved in the same state as it was left.)
+
+
+## Progress checks
+
+<!-- Note -->
+We also have the ability for a course author to define a progress
+check at the end of every lab. The progress check is initiated by the
+learner by clicking the button, and when they do, then a process on
+the LMS shells into the learners lab and then executes a set of
+commands, or a script.
+
+Right now, that’s a rather simple implementation around Paramiko —
+shell in, execute command, exit code 0 is pass, everything else is
+fail — but we’re looking to reimplement that around [Robot
+Framework](https://www.robotframework.org).
+
+There’s also a “Conditional” facility that allows us to hide a lab
+from the learner, if a prerequisite lab has not been completed
+successfully.
+
+_(Cut to progress check demo)_
+
+
+## Lab cleanup
+
+<!-- Note -->
+And finally, we also automatically clean up labs when they have not
+been used for a while. We call this the reaper and it uses similar
+data as in the suspender — although it doesn’t check when a stack last
+sent its keepalive, but when it was most recently suspended.
+
+And if a lab was suspended longer than two weeks ago — meaning the
+learner never resumed it since then, in other words, they didn’t
+actually **do** anything with the lab, we just delete the stack.
