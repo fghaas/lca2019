@@ -292,21 +292,21 @@
     <polygon style="fill: #ff0000" points="409.71,293.811 398.567,292.896 403.299,289.919 403.757,284.348 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2.8; stroke: #ff0000" points="409.71,293.811 398.567,292.896 403.299,289.919 403.757,284.348 "/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="101.6" y="19">
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:Open Sans Condensed;font-style:normal;font-weight:normal" x="101.6" y="19">
     <tspan x="101.6" y="19">Administrator</tspan>
   </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="398.6" y="19">
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:Open Sans Condensed;font-style:normal;font-weight:normal" x="398.6" y="19">
     <tspan x="398.6" y="19">User</tspan>
   </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="227.6" y="130">
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:Open Sans Condensed;font-style:normal;font-weight:normal" x="227.6" y="130">
     <tspan x="227.6" y="130">Deploy</tspan>
     <tspan x="227.6" y="146">node</tspan>
   </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="340.6" y="129">
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:Open Sans Condensed;font-style:normal;font-weight:normal" x="340.6" y="129">
     <tspan x="340.6" y="129">Load</tspan>
     <tspan x="340.6" y="145">Balancer</tspan>
   </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="23.6" y="346">
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:Open Sans Condensed;font-style:normal;font-weight:normal" x="23.6" y="346">
     <tspan x="23.6" y="346">Galera and</tspan>
     <tspan x="23.6" y="362">MongoDB</tspan>
     <tspan x="23.6" y="378">cluster</tspan>
@@ -336,7 +336,7 @@
     <polygon style="fill: #008000" points="176.682,285.29 166.67,290.266 169.182,285.272 166.694,280.267 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2.8; stroke: #008000" points="176.682,285.29 166.67,290.266 169.182,285.272 166.694,280.267 "/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="512.6" y="261">
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:Open Sans Condensed;font-style:normal;font-weight:normal" x="512.6" y="261">
     <tspan x="512.6" y="261">App</tspan>
     <tspan x="512.6" y="277">Servers</tspan>
   </text>
@@ -384,7 +384,7 @@
     <polygon style="fill: #ff0000" points="434.355,336.824 423.179,337.121 427.56,333.649 427.412,328.061 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2.8; stroke: #ff0000" points="434.355,336.824 423.179,337.121 427.56,333.649 427.412,328.061 "/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="60" y="360">
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:Open Sans Condensed;font-style:normal;font-weight:normal" x="60" y="360">
     <tspan x="60" y="360"></tspan>
   </text>
 </svg>
