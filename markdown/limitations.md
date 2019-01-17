@@ -3,6 +3,8 @@
 <!-- Note -->
 So, what are the things we **can't** do yet, or at least don't do very well?
 
+Couple of things to mention here.
+
 
 ## No “Save game” support
 
@@ -18,3 +20,17 @@ yet — it does not play nicely with nested stack resources, for example.
 
 
 ## Nested virtualization
+
+<!-- Note -->
+Under some circumstances you may want to run VMs *within* a VM in a
+lab environment, and in principle OpenStack can support that (or be
+configured to). The problem there is that VMs with running nested VMs
+
+* cannot be live-migrated, and
+* cannot be resumed after being suspended.
+
+(They just kernel-panic when waking up from managed save, or when
+unpaused from live migration.)
+
+We work around this limitation by force-rebooting VMs that use nested
+virtualization.
