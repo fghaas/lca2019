@@ -231,3 +231,37 @@ session.
 (For RDP-based sessions, we don’t need any such magic, as RDP is a
 protocol that always reconnects to an existing desktop that is
 preserved in the same state as it was left.)
+
+
+## Progress checks
+
+<!-- Note -->
+We also have the ability for a course author to define a progress
+check at the end of every lab. The progress check is initiated by the
+learner by clicking the button, and when they do, then a process on
+the LMS shells into the learners lab and then executes a set of
+commands, or a script.
+
+Right now, that’s a rather simple implementation around Paramiko —
+shell in, execute command, exit code 0 is pass, everything else is
+fail — but we’re looking to reimplement that around [Robot
+Framework](https://www.robotframework.org).
+
+There’s also a “Conditional” facility that allows us to hide a lab
+from the learner, if a prerequisite lab has not been completed
+successfully.
+
+_(Cut to progress check demo)_
+
+
+## Lab cleanup
+
+<!-- Note -->
+And finally, we also automatically clean up labs when they have not
+been used for a while. We call this the reaper and it uses similar
+data as in the suspender — although it doesn’t check when a stack last
+sent its keepalive, but when it was most recently suspended.
+
+And if a lab was suspended longer than two weeks ago — meaning the
+learner never resumed it since then, in other words, they didn’t
+actually **do** anything with the lab, we just delete the stack.
