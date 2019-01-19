@@ -56,10 +56,6 @@ we can give every learner an exactly defined working lab for whatever
 technology a course aims to teach, however complex that
 infrastructure needs might be.
 
-
-<!-- .slide: data-background-image="images/openedx-logo.svg" data-background-size="contain" -->
-
-<!-- Note -->
 Now how do we make all of that play nicely with Open edX? To explain
 that, let me introduce you to XBlocks. 
 
