@@ -110,7 +110,7 @@ OpenStack Heat) in a Celery task, and then report back the task’s
 outcome.
 
 
-<!-- .slide: data-background-image="images/openstack-logo.svg" data-background-size="contain" -->
+## Why just OpenStack?
 
 <!-- Note -->
 Now you may be wondering why is he talking only about OpenStack? Heat
