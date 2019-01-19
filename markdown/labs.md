@@ -56,10 +56,6 @@ we can give every learner an exactly defined working lab for whatever
 technology a course aims to teach, however complex that
 infrastructure needs might be.
 
-
-<!-- .slide: data-background-image="images/openedx-logo.svg" data-background-size="contain" -->
-
-<!-- Note -->
 Now how do we make all of that play nicely with Open edX? To explain
 that, let me introduce you to XBlocks. 
 
@@ -87,6 +83,8 @@ XBlock](https://github.com/hastexo/hastexo-xblock) is available that
 spins up a course author defined Heat stack on demand, and makes it
 available to learners exactly when needed.
 
+_(Cut to lab demo)_
+
 
 <!-- .slide: data-background-image="images/celery-logo.svg" data-background-size="contain" -->
 
@@ -112,7 +110,7 @@ OpenStack Heat) in a Celery task, and then report back the task’s
 outcome.
 
 
-<!-- .slide: data-background-image="images/openstack-logo.svg" data-background-size="contain" -->
+## Why just OpenStack?
 
 <!-- Note -->
 Now you may be wondering why is he talking only about OpenStack? Heat
@@ -198,8 +196,6 @@ The protocol that `guacd` emits is then read by a Java servlet,
 [WebSocket](https://en.wikipedia.org/wiki/WebSocket) protocol, which
 can then be consumed by the Guacamole *client*, running in the
 browser, which is a JavaScript application.
-
-_(Cut to lab demo)_
 
 
 <!-- .slide: data-background-image="images/guac-arch.png" data-background-size="contain" -->
