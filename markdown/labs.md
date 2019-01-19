@@ -87,6 +87,8 @@ XBlock](https://github.com/hastexo/hastexo-xblock) is available that
 spins up a course author defined Heat stack on demand, and makes it
 available to learners exactly when needed.
 
+_(Cut to lab demo)_
+
 
 <!-- .slide: data-background-image="images/celery-logo.svg" data-background-size="contain" -->
 
@@ -198,8 +200,6 @@ The protocol that `guacd` emits is then read by a Java servlet,
 [WebSocket](https://en.wikipedia.org/wiki/WebSocket) protocol, which
 can then be consumed by the Guacamole *client*, running in the
 browser, which is a JavaScript application.
-
-_(Cut to lab demo)_
 
 
 <!-- .slide: data-background-image="images/guac-arch.png" data-background-size="contain" -->
