@@ -86,7 +86,7 @@ available to learners exactly when needed.
 _(Cut to lab demo)_
 
 
-<!-- .slide: data-background-image="images/celery-logo.svg" data-background-size="contain" -->
+<!-- .slide: data-background-image="images/celery-heat-openstack.svg" data-background-size="contain" -->
 
 <!-- Note -->
 Now in case you’re wondering how exactly we’re running rather complex
