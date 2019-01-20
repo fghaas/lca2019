@@ -76,6 +76,10 @@ available to learners exactly when needed.
 
 _(Cut to lab demo)_
 
+* Spin up lab
+* Type some commands into terminal
+* Close browser tab when done
+
 
 <!-- .slide: data-background-image="images/celery-heat-openstack.svg" data-background-size="contain" -->
 
@@ -187,6 +191,11 @@ The protocol that `guacd` emits is then read by a Java servlet,
 can then be consumed by the Guacamole *client*, running in the
 browser, which is a JavaScript application.
 
+_(Return to lab demo)_
+
+* Reopen browser tab (Ctrl-Shift-T)
+* Resume lab
+
 
 <!-- .slide: data-background-image="images/guac-arch.png" data-background-size="contain" -->
 
@@ -238,6 +247,11 @@ from the learner, if a prerequisite lab has not been completed
 successfully.
 
 _(Cut to progress check demo)_
+
+* Run progress check (successfully)
+* Proceed to next lab
+* Skip ahead to lab after that
+* Observe that lab is unavailable
 
 
 ## Lab cleanup
