@@ -69,15 +69,6 @@ expand the LMS functionality. XBlocks exist for very diverse learning
 purposes: for example, building molecular models in chemistry, or
 solving mathematical equations.
 
-The XBlock SDK and API are, in contrast to the AGPL’d Open edX
-platform, [Apache
-licensed](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)).
-That means that XBlock authors can, in principle, write XBlocks that
-interface with systems that do not use open source licenses
-themselves. However, in practice, [most available
-XBlocks](https://openedx.atlassian.net/wiki/spaces/COMM/pages/43385346/XBlocks+Directory)
-do use OSI-approved open source licenses.
-
 For learning interactively on OpenStack-hosted resources, [an
 XBlock](https://github.com/hastexo/hastexo-xblock) is available that
 spins up a course author defined Heat stack on demand, and makes it
@@ -85,8 +76,12 @@ available to learners exactly when needed.
 
 _(Cut to lab demo)_
 
+* Spin up lab
+* Type some commands into terminal
+* Close browser tab when done
 
-<!-- .slide: data-background-image="images/celery-logo.svg" data-background-size="contain" -->
+
+<!-- .slide: data-background-image="images/celery-heat-openstack.svg" data-background-size="contain" -->
 
 <!-- Note -->
 Now in case you’re wondering how exactly we’re running rather complex
@@ -147,7 +142,7 @@ double digits, and making the whole endeavor entirely affordable.
 Now how does **that** work?
 
 
-### Celery, Heat, & JavaScript
+<!-- .slide: data-background-image="images/javascript-keepalive.svg" data-background-size="contain" -->
 
 <!-- Note -->
 Here’s what we do: when we spin up a stack, we record its creation
@@ -157,8 +152,7 @@ And then we have an HTTP endpoint on the LMS that listens to keepalive
 `POST`s from the client. And there’s some JavaScript running in the
 user’s browser that sends a `POST` request every thirty
 seconds. Whenever we receive such a keepalive message, we update the
-stack timestamp (we actually don’t update in-place, we append to a
-stack log, but that’s a technicality).
+stack timestamp.
 
 If the learner now closes their browser tab, or suspends their laptop,
 or loses their network connectivity so they can no longer interact
@@ -196,6 +190,11 @@ The protocol that `guacd` emits is then read by a Java servlet,
 [WebSocket](https://en.wikipedia.org/wiki/WebSocket) protocol, which
 can then be consumed by the Guacamole *client*, running in the
 browser, which is a JavaScript application.
+
+_(Return to lab demo)_
+
+* Reopen browser tab (Ctrl-Shift-T)
+* Resume lab
 
 
 <!-- .slide: data-background-image="images/guac-arch.png" data-background-size="contain" -->
@@ -248,6 +247,11 @@ from the learner, if a prerequisite lab has not been completed
 successfully.
 
 _(Cut to progress check demo)_
+
+* Run progress check (successfully)
+* Proceed to next lab
+* Skip ahead to lab after that
+* Observe that lab is unavailable
 
 
 ## Lab cleanup

@@ -17,8 +17,14 @@ Add conclusion notes here.
   Fair Use
 * Django logo:
   [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Django_logo.svg),
-  Public Domain
+  Fair Use (Public Domain?)
 * Ansible logo:
+  [Wikipedia](https://commons.wikimedia.org/wiki/File:Ansible_logo.svg),
+  Fair Use (Public Domain?)
 * Guacamole architecture: [Guacamole
   Manual](https://guacamole.apache.org/doc/gug/guacamole-architecture.html),
   ASL 2.0
+* OpenStack logos:
+  [OpenStack
+  Foundation](https://www.openstack.org/brand/openstack-logo/),
+  Permitted Use
