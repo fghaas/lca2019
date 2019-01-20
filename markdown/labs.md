@@ -147,7 +147,7 @@ double digits, and making the whole endeavor entirely affordable.
 Now how does **that** work?
 
 
-### Celery, Heat, & JavaScript
+<!-- .slide: data-background-image="images/javascript-keepalive.svg" data-background-size="contain" -->
 
 <!-- Note -->
 Here’s what we do: when we spin up a stack, we record its creation
