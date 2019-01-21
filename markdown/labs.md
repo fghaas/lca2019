@@ -186,10 +186,11 @@ support](https://issues.apache.org/jira/browse/GUACAMOLE-168) is
 another). 
 
 The protocol that `guacd` emits is then read by a Java servlet,
-`guacamole`, and translated into the
-[WebSocket](https://en.wikipedia.org/wiki/WebSocket) protocol, which
-can then be consumed by the Guacamole *client*, running in the
-browser, which is a JavaScript application.
+`guacamole` (sometimes this is confusingly named the “Guacamole
+client”, because it acts as a client to `guacd`), and translated into
+the [WebSocket](https://en.wikipedia.org/wiki/WebSocket) protocol,
+which can then be consumed by the Guacamole JavaScript client, running
+in the browser.
 
 _(Return to lab demo)_
 
