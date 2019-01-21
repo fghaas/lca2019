@@ -215,9 +215,9 @@ exec /usr/bin/screen -xRR
 ```
 
 <!-- Note -->
-`screen -xRR` means “re-attached to the most recently attached
+`screen -xRR` means “re-attach to the most recently attached
 `screen` session, and if there isn’t any running, then just fire up a
-new one.
+new one.”
 
 And by `exec`-ing that from the learner’s profile, we’re just forcing
 any SSH client (including `guacd`) to reconnect to the previous
