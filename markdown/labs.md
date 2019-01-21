@@ -161,7 +161,7 @@ with their lab, the stack timestamps don’t get updated.
 Server-side, we then have a “suspender” job that runs every minute
 (configurable) and scans the database for any stacks whose most recent
 keepalive timestamp is more than two minutes (configurable) old, and
-fires off a Heat stack suspend task (again, via Celery).
+fires off a Heat stack suspend command.
 
 When the user then returns to their lab, we resume the stack, instead
 of firing up a new one.
