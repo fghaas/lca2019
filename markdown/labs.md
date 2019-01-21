@@ -161,7 +161,7 @@ with their lab, the stack timestamps don’t get updated.
 Server-side, we then have a “suspender” job that runs every minute
 (configurable) and scans the database for any stacks whose most recent
 keepalive timestamp is more than two minutes (configurable) old, and
-fires off a Heat stack suspend task (again, via Celery).
+fires off a Heat stack suspend command.
 
 When the user then returns to their lab, we resume the stack, instead
 of firing up a new one.
@@ -186,10 +186,11 @@ support](https://issues.apache.org/jira/browse/GUACAMOLE-168) is
 another). 
 
 The protocol that `guacd` emits is then read by a Java servlet,
-`guacamole`, and translated into the
-[WebSocket](https://en.wikipedia.org/wiki/WebSocket) protocol, which
-can then be consumed by the Guacamole *client*, running in the
-browser, which is a JavaScript application.
+`guacamole` (sometimes this is confusingly named the “Guacamole
+client”, because it acts as a client to `guacd`), and translated into
+the [WebSocket](https://en.wikipedia.org/wiki/WebSocket) protocol,
+which can then be consumed by the Guacamole JavaScript client, running
+in the browser.
 
 _(Return to lab demo)_
 
@@ -215,9 +216,9 @@ exec /usr/bin/screen -xRR
 ```
 
 <!-- Note -->
-`screen -xRR` means “re-attached to the most recently attached
+`screen -xRR` means “re-attach to the most recently attached
 `screen` session, and if there isn’t any running, then just fire up a
-new one.
+new one.”
 
 And by `exec`-ing that from the learner’s profile, we’re just forcing
 any SSH client (including `guacd`) to reconnect to the previous
