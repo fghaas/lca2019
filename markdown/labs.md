@@ -81,6 +81,48 @@ _(Cut to lab demo)_
 * Close browser tab when done
 
 
+```
+$ openstack stack resource list \
+	cc212_201901_62ec9cf3cfe4ec8623d422fb456a053d \
+	-c resource_name -c resource_type
++------------------------+-------------------------------+
+| resource_name          | resource_type                 |
++------------------------+-------------------------------+
+| data_sub_net           | OS::Neutron::Subnet           |
+| daisy_data_port        | OS::Neutron::Port             |
+| deploy_config          | OS::Heat::CloudConfig         |
+| data_net               | OS::Neutron::Net              |
+| eric_management_port   | OS::Neutron::Port             |
+| deploy_done            | OS::Heat::WaitCondition       |
+| eric_data_port         | OS::Neutron::Port             |
+| eric                   | OS::Nova::Server              |
+| management_sub_net     | OS::Neutron::Subnet           |
+| deploy_floating_ip     | OS::Neutron::FloatingIP       |
+| deploy_data_port       | OS::Neutron::Port             |
+| training_key           | OS::Nova::KeyPair             |
+| deploy                 | OS::Nova::Server              |
+| frank                  | OS::Nova::Server              |
+| deploy_done_handle     | OS::Heat::WaitConditionHandle |
+| host_config            | OS::Heat::CloudConfig         |
+| daisy_management_port  | OS::Neutron::Port             |
+| management_net         | OS::Neutron::Net              |
+| frank_management_port  | OS::Neutron::Port             |
+| router_gateway         | OS::Neutron::RouterGateway    |
+| router_interface       | OS::Neutron::RouterInterface  |
+| server_security_group  | OS::Neutron::SecurityGroup    |
+| deploy_management_port | OS::Neutron::Port             |
+| daisy                  | OS::Nova::Server              |
+| frank_data_port        | OS::Neutron::Port             |
+| router                 | OS::Neutron::Router           |
++------------------------+-------------------------------+
+```
+
+<!-- Note -->
+If you’re curious, this is the set of resources that this lab created:
+a bunch of servers, networks, subnets, routers, ports, and the ability
+to access the lab via a public IP address.
+
+
 <!-- .slide: data-background-image="images/celery-heat-openstack.svg" data-background-size="contain" -->
 
 <!-- Note -->
