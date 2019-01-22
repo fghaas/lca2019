@@ -176,11 +176,12 @@ lesson, and might do one such lesson either every day, or every other
 day. Over the course of a month, learners may thus use their lab for
 as little as perhaps 10 hours in total.
 
-Now Keeping that same lab running over the entire month, at a cost of
+Now keeping that same lab running over the entire month, at a cost of
 perhaps in excess of $1,000, would be entirely
-cost-prohibitive. However, making the lab available with surgical
-precision only when needed can drive this price point down into just
-double digits, and making the whole endeavor entirely affordable.
+cost-prohibitive. However, making the lab available, with precision
+and only when needed, can drive this price point down into just double
+digits, and making the whole endeavor entirely affordable. So think of
+infrastructure costs of maybe $50 per learner, not $1,000.
 
 Now how does **that** work?
 
