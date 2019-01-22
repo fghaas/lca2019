@@ -162,6 +162,7 @@ XBlock’s fault.
 
 
 # $$$
+Cutting cost with suspend/resume
 
 <!-- Note -->
 Heat is the only cloud orchestration component that has the ability to
