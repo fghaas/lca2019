@@ -7,8 +7,10 @@ learning platform today, one that is being used by over 30 million
 learners world-wide — strongly trending upward —, that is completely
 open-source and that *you* can work with.
 
-Indeed, you can run, deploy, and operate it yourself, and today I’m
-going to show you how.
+Indeed, you can **learn** on such a platform, you can **teach and
+create learning content** with it, and you can **run, deploy, and
+operate it** yourself, and today I’m going to show you how to do all
+that.
 
 The platform that I’m talking about is primarily comprised of
 two things:

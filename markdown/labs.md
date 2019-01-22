@@ -69,6 +69,9 @@ expand the LMS functionality. XBlocks exist for very diverse learning
 purposes: for example, building molecular models in chemistry, or
 solving mathematical equations.
 
+XBlocks functionality can include things that run on the LMS server,
+content that is rendered in the learner’s browser, or both.
+
 For learning interactively on OpenStack-hosted resources, [an
 XBlock](https://github.com/hastexo/hastexo-xblock) is available that
 spins up a course author defined Heat stack on demand, and makes it
@@ -79,6 +82,48 @@ _(Cut to lab demo)_
 * Spin up lab
 * Type some commands into terminal
 * Close browser tab when done
+
+
+```
+$ openstack stack resource list \
+	cc212_201901_62ec9cf3cfe4ec8623d422fb456a053d \
+	-c resource_name -c resource_type
++------------------------+-------------------------------+
+| resource_name          | resource_type                 |
++------------------------+-------------------------------+
+| data_sub_net           | OS::Neutron::Subnet           |
+| daisy_data_port        | OS::Neutron::Port             |
+| deploy_config          | OS::Heat::CloudConfig         |
+| data_net               | OS::Neutron::Net              |
+| eric_management_port   | OS::Neutron::Port             |
+| deploy_done            | OS::Heat::WaitCondition       |
+| eric_data_port         | OS::Neutron::Port             |
+| eric                   | OS::Nova::Server              |
+| management_sub_net     | OS::Neutron::Subnet           |
+| deploy_floating_ip     | OS::Neutron::FloatingIP       |
+| deploy_data_port       | OS::Neutron::Port             |
+| training_key           | OS::Nova::KeyPair             |
+| deploy                 | OS::Nova::Server              |
+| frank                  | OS::Nova::Server              |
+| deploy_done_handle     | OS::Heat::WaitConditionHandle |
+| host_config            | OS::Heat::CloudConfig         |
+| daisy_management_port  | OS::Neutron::Port             |
+| management_net         | OS::Neutron::Net              |
+| frank_management_port  | OS::Neutron::Port             |
+| router_gateway         | OS::Neutron::RouterGateway    |
+| router_interface       | OS::Neutron::RouterInterface  |
+| server_security_group  | OS::Neutron::SecurityGroup    |
+| deploy_management_port | OS::Neutron::Port             |
+| daisy                  | OS::Nova::Server              |
+| frank_data_port        | OS::Neutron::Port             |
+| router                 | OS::Neutron::Router           |
++------------------------+-------------------------------+
+```
+
+<!-- Note -->
+If you’re curious, this is the set of resources that this lab created:
+a bunch of servers, networks, subnets, routers, ports, and the ability
+to access the lab via a public IP address.
 
 
 <!-- .slide: data-background-image="images/celery-heat-openstack.svg" data-background-size="contain" -->
@@ -120,6 +165,7 @@ XBlock’s fault.
 
 
 # $$$
+Cutting cost with suspend/resume
 
 <!-- Note -->
 Heat is the only cloud orchestration component that has the ability to
@@ -133,11 +179,12 @@ lesson, and might do one such lesson either every day, or every other
 day. Over the course of a month, learners may thus use their lab for
 as little as perhaps 10 hours in total.
 
-Now Keeping that same lab running over the entire month, at a cost of
+Now keeping that same lab running over the entire month, at a cost of
 perhaps in excess of $1,000, would be entirely
-cost-prohibitive. However, making the lab available with surgical
-precision only when needed can drive this price point down into just
-double digits, and making the whole endeavor entirely affordable.
+cost-prohibitive. However, making the lab available, with precision
+and only when needed, can drive this price point down into just double
+digits, and making the whole endeavor entirely affordable. So think of
+infrastructure costs of maybe $50 per learner, not $1,000.
 
 Now how does **that** work?
 
