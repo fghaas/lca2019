@@ -173,6 +173,13 @@ suspend an entire stack, however complex, in-place – to then resume it
 at a much later date and return it to the exact same state as it
 previously was.
 
+Now to be precise, that “suspend” operation is actually what Libvirt
+calls a “managed save”: for each VM, it memory contents are written to
+a file on the hypervisor host, and then the VM is shut down (and when
+it’s later resumed, it’s started, paused, and has its memory read back
+from the file). And thus, while suspended, it doesn’t consume any CPU
+cycles and RAM — **and that’s what cloud providers charge most for.**
+
 And this comes in super handy in the training lab use case: in
 self-paced training, learners typically spend 30-45 minutes on each
 lesson, and might do one such lesson either every day, or every other
