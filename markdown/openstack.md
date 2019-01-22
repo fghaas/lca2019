@@ -44,6 +44,5 @@ servers. The principle goes like this:
 
 Conveniently, we can use this process for both initial deployment and
 rolling minor upgrades, thanks to the stateless nature of the app
-servers, as I’m about to demonstrate:
-
-*(Cut to upgrade demo)*
+servers: deploy new app servers from new master image, throw out app
+servers spun up from old master image, done.

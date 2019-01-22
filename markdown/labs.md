@@ -69,6 +69,9 @@ expand the LMS functionality. XBlocks exist for very diverse learning
 purposes: for example, building molecular models in chemistry, or
 solving mathematical equations.
 
+XBlocks functionality can include things that run on the LMS server,
+content that is rendered in the learner’s browser, or both.
+
 For learning interactively on OpenStack-hosted resources, [an
 XBlock](https://github.com/hastexo/hastexo-xblock) is available that
 spins up a course author defined Heat stack on demand, and makes it
